@@ -1,0 +1,126 @@
+.contain{
+    width: 100%;
+    height: 100%;
+    background: var(--background-body);
+    transition: .3s;
+}
+
+.c-header{
+    width: calc(100% - 20px);
+    background: var(--background-header);
+    /* height: 80px; */
+    padding: 10px;
+    border-bottom: .5px solid gray;
+}
+
+.c-header .title{
+    display: block;
+    color: var(--text-title-color);
+    font-weight: bold;
+    font-size: 1.15em;
+    transition: .3s;
+}
+
+.c-header button, .c-header .btn{
+    font-size: .85em;
+    width: fit-content;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: var(--background-primary-button);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.c-header .btn{ 
+    position: relative;
+    width: fit-content; 
+    font-family: 'arial';
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.c-header .btn:first-child{
+    margin-left: 0;
+}
+
+.c-header .btn .icon{
+    font-size: 18px;
+    width: 12px;
+    height: 17px;
+}
+
+.c-header .btn div{
+    width: 1px;
+    height: 32px;
+    background: white;
+    margin: 0 2px 0 8px;
+}
+
+.c-header button:disabled{
+    background: gray;
+}
+
+.c-body{
+    width: 100%;
+    height: calc(100% - 84px);
+    overflow-y: auto;
+}
+
+.c-float{
+    position: relative;
+}
+
+.float-option{
+    position: absolute;
+    top: 33px;
+    width: 140px;
+    height: 0px;
+    transition: .3s;
+    z-index: 9999;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px gray;
+    overflow: hidden;
+}
+
+.c-float:hover .float-option{
+    height: 88px;
+    background: var(--background-header);
+}
+
+.c-float:hover .float-option span{
+    font-size: .85em;
+    font-weight: normal;
+    margin: 0;
+    color: var(--text-primary-color);
+}
+
+.item-option{
+    padding: 10px 5px;
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: .5px solid gray;
+    cursor: pointer;
+
+}
+
+.item-option img{
+    height: 24px;
+    margin-right: 10px;
+}
+
+.icon_back{
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: var(--text-title-color);
+}

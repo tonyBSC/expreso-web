@@ -1,0 +1,35 @@
+<div class="navbar">
+    <button class="menu-btn" matIconButton (click)="showMenu()">
+            <mat-icon>{{ !menuStore.toggle() ? 'menu' : 'close'}}</mat-icon>
+        </button>
+    <div class="enterprise">
+        <div class="logo-container">
+            <img [src]="menuStore.logoUrl()">
+        </div>
+        <span class="name">CoderBuild</span>
+    </div>
+    <div class="options-menu">
+        <a class="option" href="" routerLink="/home" routerLinkActive="active">  
+            {{ 'about_us' | translate }}
+        </a>
+        <a class="products">  
+            {{ 'products' | translate }} 
+            <mat-icon>arrow_drop_down</mat-icon>
+            <div class="floating-menu">
+                <div class="arrow"></div>
+                <a class="option" routerLink="/mi-expresso" routerLinkActive="active">MiExpresso</a>
+            </div>
+        </a>
+        <a class="option" routerLink="/contact" routerLinkActive="active">  
+            {{ 'contact_us' | translate }}
+        </a>
+    </div>
+    <div class="container-actions">
+        <button matIconButton [ngClass]="{'selected': menuStore.darkmode() }" (click)="setDarkmode()">
+            <mat-icon>dark_mode</mat-icon>
+        </button>
+         <button matIconButton [ngClass]="{'selected': menuStore.translate() }" (click)="setTranslate()">
+            <mat-icon>translate</mat-icon>
+        </button>
+    </div>
+</div>

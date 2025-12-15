@@ -1,0 +1,31 @@
+<div class="menu-container hide" id="menu-responsive">
+    <div class="options">
+        <div class="menu">
+            <a class="option" routerLink="/home" routerLinkActive="active" (click)="hideMenu()">  
+                {{ 'about_us' | translate }}
+            </a>
+            <a class="products" (mouseenter)="openMenu()" (mouseleave)="closeMenu()">  
+                {{ 'products' | translate }} 
+                <mat-icon>arrow_drop_down</mat-icon>
+                @if( isMenuOpen() ){
+                    <div class="floating-menu" >
+                        <div class="arrow"></div>
+                        <a class="option" routerLink="/mi-expresso" routerLinkActive="active" (click)="hideMenu()">MiExpresso</a>
+                    </div>
+                }
+            </a>
+            <a class="option" routerLink="/contact" routerLinkActive="active" (click)="hideMenu()">  
+                {{ 'contact_us' | translate }}
+            </a>
+        </div>
+        <div class="container-actions">
+            <button matIconButton [ngClass]="{'selected': menuStore.darkmode() }" (click)="setDarkmode()">
+                <mat-icon>dark_mode</mat-icon>
+            </button>
+            <button matIconButton [ngClass]="{'selected': menuStore.translate() }" (click)="setTranslate()">
+                <mat-icon>translate</mat-icon>
+            </button>
+        </div>
+    </div>
+
+</div>

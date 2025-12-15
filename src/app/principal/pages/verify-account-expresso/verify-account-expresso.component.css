@@ -1,0 +1,52 @@
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 46px);
+}
+
+.container{
+  padding: 15px;
+  border-radius: 19px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 1px gray;
+  min-width: 300px;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom{ margin: 0 auto;}
+
+::ng-deep .custom circle {
+  stroke: var(--background-primary-button); /* verde */
+}
+
+.container .text{
+  font-size: 1.25em;
+  margin-top: 30px;
+  display: block;
+  color: var(--text-primary-color);
+  transition: .3s;
+}
+
+.detail{ text-align: center;}
+
+.container .message{
+  font-size: 1.25em;
+  display: block;
+  color: var(--text-primary-color);
+  transition: .3s;
+  text-transform: capitalize;
+}
+
+.icon{
+  font-size:  100px;
+  width:  100px;
+  height:   100px;
+}
+
+.error{ color: #f93636 }
+.success{ color: #1ada1a}

@@ -1,0 +1,45 @@
+.container{
+    border-top: 20px solid orange;
+    padding: 6px 20px 20px;
+    background: var(--background-header);
+}
+
+.container p{ 
+    margin: 0;
+    color: var(--text-primary-color);
+}
+
+.container p:first-child{
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.container div{
+    margin-top: 15px;
+    display: flex;
+    justify-content: end;
+}
+
+button{
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: .3s;
+    border-radius: 9px;
+}
+
+button:last-child{ margin-right: 0px;}
+
+.close{ color: var(--text-primary-color);}
+.close:hover{
+    background: rgba(70, 70, 70, 0.245);
+}
+
+.delete{ color: red }
+.delete:hover{
+    background: rgba(243, 43, 43, 0.35);
+}

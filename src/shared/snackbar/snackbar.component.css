@@ -1,0 +1,64 @@
+.container-border{
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.507);
+}
+
+.container-main{
+  min-height: 50px;
+  max-height: 150px;
+  display: flex;
+  z-index: 999999999;
+  border-radius: 5px;
+
+  overflow: hidden;
+  align-items: center;
+  background: white;
+  /* box-shadow: 0px 0px 4px gray; */
+}
+
+.divider{
+  height: 100%;
+  width: 6px;
+}
+
+.icon{
+  margin: 0px 10px 0px 5px;
+  font-size: 26px;
+  width: 26px;
+  height: 26px;
+}
+
+.container-labels{
+  width: 100%;
+}
+.container-labels label{
+  display: block;
+}
+
+.container-labels label:first-child{
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: 'Titillium Web';
+  color: black
+}
+
+.container-labels label:last-child{
+  font-size: .93em;
+  font-family: 'Titillium Web';
+  color: gray;
+}
+
+.close{
+  font-size: 15px;
+  height: 15px;
+  width: 15px;
+  margin: 5px;
+  color: gray;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.close:hover{
+  color: black
+}

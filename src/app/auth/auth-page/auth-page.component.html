@@ -1,0 +1,42 @@
+<div class="container-full bg-login flex flex-center">
+	<div class="container-login">
+		<img loading="lazy" class="zoomIn" src="/assets/img/aquasonic-logo.svg" width="180" height="60" alt="logo-aquasonic"/>
+		<div>
+			<div class="widthIn">
+				<input-form 
+					[placeHolder]=" 'user' | translate "
+					(value)="user.set($event)"
+					prefixIcon="account_circle"
+					margin="15px 0px 0px 0px"
+					[disabled]="login.isPending()"
+				/>
+			</div>
+
+			<div class="widthInReverse">
+				<input-form 
+					[placeHolder]=" 'password' | translate "
+					(value)="password.set($event)"
+					prefixIcon="vpn_key"
+					margin="20px 0px 0px 0px"
+					type="password"
+					[disabled]="login.isPending()"
+				/>
+			</div>
+
+			<div class="heightIn">
+				@if( !login.isPending() ){
+					<button (click)="validateUser()">{{ 'login' | translate }}</button>
+				}@else {
+					<mat-spinner
+						[style]="{'margin': '20px auto 0'}"
+						mode="indeterminate"
+						color="primary"
+						[diameter]="40" > </mat-spinner>
+				}
+			</div>
+
+			<div class="options zoomInDelay">
+				{{ 'forgot_password' | translate }}
+			</div>
+		</div>
+  </div>

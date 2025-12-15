@@ -1,0 +1,141 @@
+.container{
+  width: 100%;
+  height: calc(100% - 46px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+
+.device-wrapper {
+  position: relative;
+  width: 250px;     /* o el tamaño que quieras */
+  /* margin: 0 auto; */
+  z-index: 1;
+  display: inline-block;
+
+}
+
+.device-frame {
+  width: 100%;
+  display: block;
+}
+
+/* La imagen de tu app */
+.app-screen {
+  position: absolute;
+  top: 2.8%;
+  left: 6%;
+  width: 89%;
+  height: 94.5%;
+  object-fit: fill;
+  border-radius: 31px;
+  z-index: 2;
+}
+
+.details{
+  display: flex;
+  align-items: center;      /* ← centrar verticalmente */
+  gap: 40px;                /* espacio entre teléfono y texto */
+  padding:  0 20%;
+  text-align: justify;
+
+}
+
+.about{
+  width: 60%;
+  display: inline-block;
+  position: relative;
+  padding: 15px;
+  backdrop-filter: blur(5px);
+  border-radius: 9px;
+}
+
+.about p{
+  color: var(--text-primary-color);
+  font-weight: bold;
+  transition: .3s;
+  margin-bottom: 10px;
+}
+
+.about span{
+  color: var(--text-primary-color);
+  transition: .3s;
+}
+
+.store{
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.store .btn{
+  /* width: 150px; */
+  padding: 10px 10px;
+  background: black;
+  border-radius: 9px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.store .btn img{ width: 25px;}
+
+.store .btn .text{
+  height: 18px;
+  font-size: .95em;
+  display: flex ;
+  align-items: center;
+
+}
+
+.specifications{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  margin: 15px;
+}
+
+.specifications div{
+  width: 100%;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: var(--text-primary-color);
+  transition: .3s;
+  /* text-align: start; */
+}
+
+@media (max-width: 1050px) {
+  .details{ padding:  0 10%;}
+}
+
+@media (max-width: 805px) {
+  .details{ padding:  0 5%; gap: 20px;}
+  .store .btn .text{ font-size: .75em;}
+}
+
+@media (max-width: 650px) {
+  .details{ 
+    flex-direction: column; 
+    padding: 20px 5%;
+    height: calc(100% - 40px);
+
+  }
+  .device-wrapper {
+    width: 220px;     /* o el tamaño que quieras */
+  }
+
+  .app-screen{ border-radius: 27px;}
+
+  .about{
+    width: 95%;
+  }
+
+}

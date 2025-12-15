@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="details">
+        <div class="device-wrapper fade-in-left">
+            <img src="images/principal/iphone-frame.png" class="device-frame" />
+            <img [src]="menuStore.appUrl()" class="app-screen" />
+        </div>
+        <div class="about fade-in-right">
+            <div>
+                <p>MiExpresso</p>
+                <span>
+                    {{ 'expresso_description' | translate }}
+                </span>
+                <div class="specifications">
+                    <div>
+                        <mat-icon>near_me</mat-icon>
+                       {{ 'realtime_tracking' | translate }}
+                    </div>
+                    
+                    <div>
+                        <mat-icon>notifications_active</mat-icon>
+                        {{ 'notification_and_event' | translate }}
+                    </div>
+
+                    <div>
+                        <mat-icon>adjust</mat-icon>
+                        {{ 'geofence_setting' | translate }}
+                    </div>
+
+                    <div>
+                        <mat-icon>support</mat-icon>
+                        {{ 'support_expresso' | translate }}
+                    </div>
+
+                </div>
+                <div class="store">
+                    <div class="btn">
+                        <img src="images/principal/apple.webp">
+                        <div>
+                            <div class="text">{{ 'download_in' | translate }}</div>
+                            <div class="text">App Store</div>
+
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <img src="images/principal/play-store-logo.webp">
+                        <div>
+                            <div class="text">{{ 'download_in' | translate }}</div>
+                            <div class="text">Google Play</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

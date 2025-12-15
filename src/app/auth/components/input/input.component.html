@@ -1,0 +1,16 @@
+<div class="input-wrap" 
+    [style.--input-form-color]="inputColor()" 
+    [style.--input-focus-color]="inputFocusColor()" 
+    [style]="{
+    'margin': margin()
+    }"
+>
+    <div class="icon-form" [style.--icon-form-color]="iconColor()">
+        <mat-icon>{{prefixIcon()}}</mat-icon>
+    </div>
+    <input 
+        [type]="type()" 
+        [placeholder]="placeHolder()" 
+        (input)="onInputChange($event)"
+        [disabled]="disabled()">
+</div>

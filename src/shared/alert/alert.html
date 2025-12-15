@@ -1,0 +1,9 @@
+<div class="container">
+    <p> {{data.title}} </p>
+    <p> {{data.message}} </p>
+    <div>
+        @for(item of data.actions; track item.value){
+            <button (click)="action(item.value)" [ngClass]="item.style">{{ item.label }}</button>
+        }
+    </div>
+</div>

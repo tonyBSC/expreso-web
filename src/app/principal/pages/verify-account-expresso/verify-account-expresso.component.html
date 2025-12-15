@@ -1,0 +1,33 @@
+<div class="main">
+    <div class="container">
+        @if(verificationQuery.isLoading()){
+            <div>
+                <mat-spinner 
+                    diameter="100" 
+                    strokeWidth="6"
+                    class="custom"/>
+                <span class="text">Verificando la cuenta cuenta</span>
+            </div>
+        }@else{
+            @if(verificationQuery.data()?.hasOwnProperty("success")){
+                @if(verificationQuery.data()?.success == true){
+                    <div class="detail">
+                        <mat-icon class="icon success">done_all</mat-icon>
+                        <span class="message">Su cuenta a sido verificada correctamente</span>
+                    </div>
+                }@else{
+                    <div class="detail">
+                        <mat-icon class="icon error">priority_hight</mat-icon>
+                        <span class="message">{{ verificationQuery.data()?.message }}</span>
+
+                    </div>
+                }
+            }@else{
+                <div class="detail">
+                    <mat-icon class="icon error">priority_hight</mat-icon>
+                    <span class="message">{{ verificationQuery.data()?.message }}</span>
+                </div>
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// Tema claro
+$light-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$blue-palette,
+  )
+));
+
+// Tema oscuro
+$dark-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$blue-palette,
+  )
+));
+
+// Aplica el tema claro por defecto
+:root {
+  @include mat.all-component-themes($light-theme);
+
+}
+
+// Aplica tema oscuro si body tiene clase .dark-theme
+.dark-theme {
+  @include mat.all-component-themes($dark-theme);
+}

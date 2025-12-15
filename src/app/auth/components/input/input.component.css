@@ -1,0 +1,39 @@
+.input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrap .icon-form {
+  position: absolute;
+  left: 10px;
+  top: 56%;
+  transform: translateY(-50%);
+  color: var(--icon-form-color);
+}
+
+.input-wrap input {
+  width: 100%;
+  padding: 10px 10px 10px 40px; 
+  box-sizing: border-box;
+  border-radius: 9px;
+  background: hsla(0, 0%, 100%, .18823529411764706);
+  outline: none;
+  border: none;
+  box-shadow: 0 0 1px grey;
+  caret-color: var(--input-form-color);
+  color: var(--input-form-color);
+  font-family: "Titillium Web";
+  transition: .3s;
+}
+
+.input-wrap input::placeholder{
+  color: var(--input-form-color);
+}
+
+.input-wrap input:focus{
+  box-shadow: 0 0 3px var(--input-focus-color);
+}
+
+.input-wrap:focus .icon-form{
+  color: #e96f49;
+}

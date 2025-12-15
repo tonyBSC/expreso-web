@@ -1,0 +1,104 @@
+.menu-container{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 46px;
+  width: 180px;
+  height: calc(100% - 66px);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  transition: .3s;
+  z-index: 99999999;
+}
+
+.menu-container a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide{
+  left: -220px !important;
+}
+
+.menu-container .option:hover, .active{
+  background: var(--background-primary-button);
+  color: white !important;
+}
+
+.options{ height: 100%;}
+
+.options, .options .menu{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products{
+  position: relative;
+  background: transparent !important;
+  height: 100%;
+  color: var(--text-primary-color) !important;
+}
+
+.products .floating-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.no-hover {
+  pointer-events: none !important;
+}
+
+.floating-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 160px;
+  background: var(--background-header);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 12px 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 999;
+  padding: 10px;
+}
+
+/* EL TRIÁNGULO */
+.floating-menu .arrow {
+  position: absolute;
+  top: 10px;                  /* Ajusta según tu diseño */
+  left: -6px;                 /* Lo colocas al lado izquierdo del contenedor */
+  width: 0;
+  height: 0;
+
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid var(--background-header);   /* ← TRIÁNGULO apuntando a la derecha */
+
+  filter: drop-shadow(-2px 0 2px rgba(0,0,0,0.1));
+}
+
+@media (max-width: 675px) {
+  .menu-container{
+    display: block;
+  }
+
+  .menu-container a{
+    text-decoration: none;
+    color: var(--text-primary-color);
+    width: calc(100% - 20px);
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: .3s;
+    text-align: center;
+    /* display: block; */
+  }
+}

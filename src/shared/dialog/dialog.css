@@ -1,0 +1,49 @@
+.c-dialog{
+  background: var(--background-header);
+}
+
+h5{
+  border-bottom: .5px solid gray;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  color: var(--text-primary-color) !important;
+  font-size: 1.15em !important;
+}
+
+.actions{
+  border-top: .5px solid gray;
+  color: var(--text-primary-color) !important;
+}
+
+button{
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: .3s;
+  border-radius: 9px;
+}
+
+button:last-child{ margin-right: 0px;}
+
+.close{ color: var(--text-primary-color);}
+.close:hover{
+  background: rgba(70, 70, 70, 0.245);
+}
+
+.continue{ color: #037bd0 }
+.continue:hover{
+  background: #037bd050;
+}
+.continue:disabled{ color: gray;}
+.continue:disabled:hover{ background: transparent; cursor: default;}
+
+@media (max-width: 600px) {
+    .dialog-content {
+      height: 100% !important;
+      min-height: calc(100vh - 115px);
+    }
+  }

@@ -1,0 +1,51 @@
+<div class="main-container">
+    <div class="form">
+        <span> {{ 'contact_us2' | translate }} </span>
+        <div class="widthIn">
+            <input-form
+                 [placeHolder]=" 'name' | translate "
+                 (value)="subject.set($event)"
+                 prefixIcon="person"
+                 inputColor="var(--text-primary-color)"
+                 inputFocusColor="var(--primary-color)"
+                 iconColor="var(--text-primary-color)"
+             />
+        </div>
+
+        <div class="widthInReverse">
+            <input-form
+                [placeHolder]=" 'email' | translate "
+                (value)="email.set($event)"
+                prefixIcon="alternate_email"
+                inputColor="var(--text-primary-color)"
+                inputFocusColor="var(--primary-color)"
+                iconColor="var(--text-primary-color)"
+            />
+        </div>
+
+        <div class="widthIn">
+            <textarea class="message"
+                [(ngModel)]="message"
+                maxlength="500"
+                [placeholder]=" 'message' | translate "
+            ></textarea>
+        </div>
+        @if ( !isSend() ){
+            <button 
+                class="btn-send"
+                matButton="filled" 
+                (click)="send()"
+                [disabled]="isDisabled()"
+    
+            >
+                {{ 'send' | translate }}
+            </button>
+        }@else {
+            <mat-spinner class="custom"
+                strokeWidth="4"
+                diameter="30"
+                color="accent"/>
+        }
+
+    </div>
+</div>

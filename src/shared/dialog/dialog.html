@@ -1,0 +1,15 @@
+<div class="c-dialog">
+    <h5 mat-dialog-title>{{ title() }}</h5>
+    @if( isLoad()?.() ){
+        <mat-progress-bar mode="indeterminate" />
+    }
+    <mat-dialog-content class="dialog-content">
+        <ng-content></ng-content>
+    </mat-dialog-content>
+    <mat-dialog-actions class="actions" align="end">
+        <button class="close" mat-dialog-close>{{ 'cancel' | translate }}</button>
+        <button class="continue" (click)="action.emit()" [disabled]="isLoad()?.() || disable()" cdkFocusInitial > {{ 'save' | translate }} </button>
+        <!-- <button matButton mat-dialog-close>{{ 'cancel' | translate }}</button>
+        <button matButton (click)="action.emit()" [disabled]="isLoad()?.() || disable()" cdkFocusInitial>{{ 'save' | translate }}</button> -->
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,11 @@
+<div class="container-border" [style]="{'border': '5px solid '+ data.color}">
+    <div class="container-main" >
+        <div class="divider" [style]="{'background': data.color}"></div>
+        <mat-icon class="icon" [style]="{'color': data.color}">{{data.icon}}</mat-icon>
+        <div class="container-labels">
+            <label>{{data.title}}</label>
+            <label>{{data.message}}</label>
+        </div>
+        <mat-icon class="close" (click)="close()">close</mat-icon>
+    </div>
+</div>
