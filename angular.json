@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Aquasonic": {
+    "Expreso": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -64,10 +65,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Aquasonic:build:production"
+              "buildTarget": "Expreso:build:production"
             },
             "development": {
-              "buildTarget": "Aquasonic:build:development"
+              "buildTarget": "Expreso:build:development"
             }
           },
           "defaultConfiguration": "development"
