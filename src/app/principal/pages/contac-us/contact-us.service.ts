@@ -13,7 +13,8 @@ export function useSendEmailMutation() {
   return injectMutation(() => ({
     mutationFn: (params: any) =>
       lastValueFrom(
-        http.post(`${envs.backend}/email/send`, params, {
+        http.post(`https://ep2n2ew5ar.us-east-1.awsapprunner.com/api/v1/email/send`, params, {
+        // http.post(`${envs.backend}/email/send`, params, {
           headers,
         }).pipe(
           catchError((error: HttpErrorResponse) => {
