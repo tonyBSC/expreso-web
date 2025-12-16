@@ -19,7 +19,8 @@ export function useVericatioAccount(token: string) {
         queryKey: ["Verify", token],
 		queryFn: () =>
 			lastValueFrom(
-				http.get<Response>(`${envs.backend}/auth/verify?token=${token}`, ).pipe(
+				// http.get<Response>(`${envs.backend}/auth/verify?token=${token}`, ).pipe(
+				http.get<Response>(`https://ep2n2ew5ar.us-east-1.awsapprunner.com/auth/verify?token=${token}`, ).pipe(
 					catchError((error: HttpErrorResponse) => {
 						return throwError(() => error);
 					})
