@@ -1,9 +1,9 @@
 {
-  "name": "Aquasonic",
-  "short_name": "Aquasonic",
+  "name": "CoderBuild",
+  "short_name": "CoderBuild",
   "display": "standalone",
   "scope": "./",
-  "start_url": "./",
+  "start_url": "/login",
   "icons": [
     {
       "src": "icons/icon-192x192.png",

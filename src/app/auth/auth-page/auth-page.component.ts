@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { Router } from '@angular/router'
 
 import { InputFormComponent } from '../components/input/input.component';
@@ -19,9 +19,9 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrl: './auth-page.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InputFormComponent, TranslateModule, MatProgressSpinnerModule],
-
+  standalone: true
 })
-export class AuthPageComponent { 
+export class AuthPageComponent{ 
   authStore = inject(AuthStore);
   user = signal<String>("")
   password = signal<String>("")
