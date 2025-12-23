@@ -25,14 +25,19 @@ export const routes: Routes = [
 				loadComponent: () => import('./principal/pages/contac-us/contac-us.component').then(m => m.ContacUsComponent),
 			},
 			{ 
-				path: 'mi-expresso', 
+				path: 'mi-expreso', 
 				loadComponent: () => import('./principal/pages/expresso/expresso.component').then(m => m.ExpressoComponent),
 			},
-			{ 
-				path: 'verify-account-expresso', 
-				loadComponent: () => import('./principal/pages/verify-account-expresso/verify-account-expresso.component').then(m => m.VerifyAccountExpressoComponent),
-			},
+			
 		]
+	},
+	{ 
+		path: 'verify-account-expreso', 
+		loadComponent: () => import('./principal/pages/verify-account-expresso/verify-account-expresso.component').then(m => m.VerifyAccountExpressoComponent),
+	},
+	{ 
+		path: 'reset-password-expreso', 
+		loadComponent: () => import('./principal/pages/reset-password-expresso/reset-password-expresso').then(m => m.ResetPasswordExpressoComponent),
 	},
 	{
 		path: '**',

@@ -47,7 +47,15 @@
 	"@_AuthPage":{},
 	"user": "User",
 	"password": "Password",
+	"new_password": "New password",
+	"validate_password": "Validate password",
 	"login": "Login",
 	"forgot_password": "Forgot you password?",
-	"error_credentials": "Invalid credentials entered"
+	"error_credentials": "Invalid credentials entered",
+	"required_password": "Password is required",
+	"min_length_password": "Minimum 8 characters",
+	"validator_password": "Must contain uppercase, lowercase, and number",
+	"reset_password": "Reset Password",
+	"password_not_coincidence": "Passwords do not match"
+
 }

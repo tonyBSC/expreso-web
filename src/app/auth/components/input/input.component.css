@@ -11,9 +11,18 @@
   color: var(--icon-form-color);
 }
 
+
+.input-wrap .icon-form-right {
+  position: absolute;
+  right: 10px;
+  top: 56%;
+  transform: translateY(-50%);
+  color: var(--icon-form-color);
+}
+
 .input-wrap input {
   width: 100%;
-  padding: 10px 10px 10px 40px; 
+  /* padding: 10px 40px 10px 40px;  */
   box-sizing: border-box;
   border-radius: 9px;
   background: hsla(0, 0%, 100%, .18823529411764706);
@@ -36,4 +45,13 @@
 
 .input-wrap:focus .icon-form{
   color: #e96f49;
+}
+
+input:disabled{
+  color: gray !important
+}
+
+input:disabled::placeholder{
+  color: gray !important
+
 }

@@ -47,7 +47,14 @@
 	"@_AuthPage":{},
 	"user": "Usuario",
 	"password": "Contraseña",
+	"new_password": "Nueva contraseña",
+	"validate_password": "Validar contraseña",
 	"login": "Ingresar",
 	"forgot_password": "¿Olvidaste la contraseña?",
-	"error_credentials": "Credenciales ingresadas inválidas"
+	"error_credentials": "Credenciales ingresadas inválidas",
+	"required_password": "La contraseña es obligatoria",
+	"min_length_password": "Mínimo 8 caracteres",
+	"validator_password": "Debe tener mayúscula, minúscula y número",
+	"reset_password": "Reestablecer Contraseña",
+	"password_not_coincidence": "La contraseña no coincide"
 }
